@@ -1,0 +1,11 @@
+:root {
+    --primary-background-color:#30364F;
+    --primary-text-color:#FFFFFF;
+    --primary-box-color:#F0F0DB;
+    --primary-blank1-color:#E1D9BC;
+    --primary-blank2-color:#ACBAC4;
+}
+body {
+    background-color: var(--primary-background-color);
+    box-sizing: border-box;
+}

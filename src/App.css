@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.nav-item{
+    font-size: 2em;
+}
