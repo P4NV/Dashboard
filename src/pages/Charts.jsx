@@ -3,54 +3,63 @@ import { Bar, BarChart, XAxis, YAxis, Pie, PieChart, Sector, Tooltip } from 'rec
 
 const pieData = [
     { name: 'Category A', value: 500 },
-    { name: 'Category B', value: 1000 }
+    { name: 'Category B', value: 800 },
+    { name: 'Category C', value: 200 },
+    { name: 'Category D', value: 400 },
 ];
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 // #region Sample data
-const data = [
+const ChartData = [
     {
-        name: 'Page A',
+        name: 'Monday',
+        text:"#fff",
         uv: 400,
         pv: 2400,
         amt: 2400,
     },
     {
-        name: 'Page B',
+        name: 'Tuesday',
         uv: 300,
         pv: 4567,
         amt: 2400,
     },
     {
-        name: 'Page C',
+        name: 'Wednesday',
         uv: 300,
         pv: 1398,
         amt: 2400,
     },
     {
-        name: 'Page D',
+        name: 'Thursday',
         uv: 200,
         pv: 9800,
         amt: 2400,
     },
     {
-        name: 'Page E',
+        name: 'Friday',
         uv: 278,
         pv: 3908,
         amt: 2400,
     },
     {
-        name: 'Page F',
+        name: 'Saturday',
         uv: 189,
         pv: 4800,
         amt: 2400,
     },
+    {
+        name: 'Sunday',
+        uv: 300,
+        pv: 4800,
+        amt: 2400,
+    }
 ];
 
 const margin = {
     top: 20,
-    right: 30,
-    left: 20,
-    bottom: 25,
+    right: 10,
+    left: 10,
+    bottom:10,
 };
 // #endregion
 
@@ -59,19 +68,20 @@ const formatAxisTick = (value) => {
 };
 
 const renderCustomBarLabel = ({ x, y, width, value }) => {
-    return <text x={x + width / 2} y={y} fill="#666" textAnchor="middle" dy={-6}>{`value: ${value}`}</text>;
+    return <text x={x + width / 2} y={y} fill="#fff" textAnchor="middle" dy={-6}>{`value: ${value}`}</text>;
 };
 
 export function CustomizeLabels() {
     return (
-        <BarChart width={600} height={300} data={data} margin={margin}>
+        <BarChart fill="#fff" width={700} height={400} data={ChartData} margin={margin}>
             <XAxis
+                stroke="#fff"
                 dataKey="name"
                 tickFormatter={formatAxisTick}
-                label={{ position: 'insideBottomRight', value: 'XAxis title', offset: -10 }}
+                label={{fill:"#fff", position: 'insideBottomRight', value: '', offset: -10 }}
             />
-            <YAxis label={{ position: 'insideTopLeft', value: 'YAxis title', angle: -90, dy: 60 }} />
-            <Bar dataKey="uv" fill="#8884d8" label={renderCustomBarLabel} />
+            <YAxis stroke="#fff" label={{fill:"#fff", position: 'insideTopLeft', value: '', angle: -90, dy: 60 }} />
+            <Bar dataKey="uv" fill="#E1D9BC" label={renderCustomBarLabel} />
         </BarChart>
     );
 }
@@ -118,7 +128,7 @@ export function PieWithGradient({
         defaultIndex,
         }) {
     return (
-        <PieChart style={{ width: '100%', maxWidth: '500px', maxHeight: '80vh', aspectRatio: 1 }} responsive>
+        <PieChart style={{ width: '100%', maxWidth: '400px', maxHeight: '80vh', aspectRatio: 1 }} responsive>
             <Pie data={pieData} dataKey="value" isAnimationActive={isAnimationActive} shape={PieGradient} innerRadius="20%" />
             <Tooltip defaultIndex={defaultIndex} />
         </PieChart>
