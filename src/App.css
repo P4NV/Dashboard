@@ -24,3 +24,11 @@
 .axis{
     color: #fff;
 }
+html,body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: ui-serif,Georgia,Cambria;
+}

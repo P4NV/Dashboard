@@ -5,7 +5,7 @@ import { PieWithGradient, CustomizeLabels } from "./pages/Charts.jsx";
 function App() {
 
   return (
-    <>
+    <div className="flex flex-row flex-wrap ">
         <section className="navbar w-full h-32 flex justify-end items-center bg-[#E1D9BC]">
             <div className="navbar-container flex-row mx-auto">
                 <ul className="navbar-buttons flex flex-row justify-center gap-20">
@@ -25,11 +25,11 @@ function App() {
             </div>
                 <ExpandClick />
         </section>
-        <section className="center-content">
+        <section className="center-content border-12 min-w-screen flex flex-col items-end gap-10 px-15">
             <PieWithGradient/>
             <CustomizeLabels/>
         </section>
-    </>
+    </div>
   )
 }
 

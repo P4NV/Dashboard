@@ -4,27 +4,35 @@ export default function Sidebar() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className={`fixed top-0 h-screen transition-all duration-500 ${isOpen ? 'right-0' : '-right-40'}`}>
-            <div className="bg-[#E1D9BC] w-40 h-full relative">
-                {/* Button positioned on left edge */}
-                <button
-                    onClick={() => setIsOpen(!isOpen)}
-                    className="absolute -left-10 -translate-x-full border-2 border-b-4 border-r-4 text-sm flex items-center justify-center top-11 h-10 w-16"
-                >
-                    {isOpen ? 'Close' : 'Menu'}
-                </button>
-
-                <div className="flex text-4xl items-center justify-center pt-6">
-                    <p>logo</p>
-                </div>
-                <ul className="mt-5 space-y-4">
-                    <li className="border-2 max-w-10/12 border-l-4 border-b-4 px-5 mx-auto">
-                        <button>Profile</button>
-                    </li>
-                    <li className="border-2 max-w-10/12 border-l-4 border-b-4 px-5 mx-auto">
-                        <button>Settings</button>
-                    </li>
+        <div className="flex flex-col items-center min-w-45 min-h-4/5 rounded-4xl px-5 py-10 fixed bg-[#E1D9BC] left-10 top-40 gap-10 ">
+            <div className="w-full flex justify-center items-center">
+                <h1 className="text-4xl font-bold ">Name</h1>
+            </div>
+            <div className="flex flex-col w-full justify-center items-center">
+                <ul className="space-y-8 ">
+                    <li><button>Something</button></li>
+                    <li><button>Something</button></li>
+                    <li><button>Something</button></li>
+                    <li><button>Something</button></li>
                 </ul>
+                <hr className="my-3 min-w-4/5 border-3 rounded-4xl"/>
+                <ul className="space-y-8">
+                    <li><button>Something</button></li>
+                    <li><button>Something</button></li>
+                    <li><button>Something</button></li>
+                    <li><button>Something</button></li>
+                    <li><button>Something</button></li>
+                </ul>
+            </div>
+            <div className="flex flex-col items-center ">
+                <h1>Social support</h1>
+                <hr className="my-3 min-w-4/5 border-3 rounded-4xl"/>
+                <div>
+                    <button>Some</button>
+                    <button>Some</button>
+                    <button>Some</button>
+                    <button>Some</button>
+                </div>
             </div>
         </div>
     );
@@ -34,4 +42,8 @@ export default function Sidebar() {
 //use stateom da rendera pune liste podataka naprimjer
 /*
    {isOpen ? to i to renderati : da budu samo ikone}
+ */
+
+/*
+onMouseEnter/onMouseLeave funkcija za hover efect
  */
