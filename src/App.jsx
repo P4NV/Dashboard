@@ -1,5 +1,5 @@
 import './App.css'
-import ExpandClick from "./Functions/expandClick.jsx";
+import SideBar from "./Functions/sideBar.jsx";
 import { PieWithGradient, CustomizeLabels } from "./pages/Charts.jsx";
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
                     </li>
                 </ul>
             </div>
-                <ExpandClick />
+                <SideBar />
         </section>
         <section className="center-content border-12 min-w-screen flex flex-col items-end gap-10 px-15">
             <PieWithGradient/>
