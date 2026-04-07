@@ -73,16 +73,18 @@ const renderCustomBarLabel = ({ x, y, width, value }) => {
 
 export function CustomizeLabels() {
     return (
-        <BarChart fill="#fff" width={700} height={400} data={ChartData} margin={margin}>
-            <XAxis
-                stroke="#fff"
-                dataKey="name"
-                tickFormatter={formatAxisTick}
-                label={{fill:"#fff", position: 'insideBottomRight', value: '', offset: -10 }}
-            />
-            <YAxis stroke="#fff" label={{fill:"#fff", position: 'insideTopLeft', value: '', angle: -90, dy: 60 }} />
-            <Bar dataKey="uv" fill="#E1D9BC" label={renderCustomBarLabel} />
-        </BarChart>
+        <div className=" flex justify-center items-center w-[750px] py-5 border rounded-4xl border-gray-200 bg-gray-500/50 ">
+            <BarChart fill="#fff" width={700} height={400} data={ChartData} margin={margin}>
+                <XAxis
+                    stroke="#fff"
+                    dataKey="name"
+                    tickFormatter={formatAxisTick}
+                    label={{fill:"#fff", position: 'insideBottomRight', value: '', offset: -10 }}
+                />
+                <YAxis stroke="#fff" label={{fill:"#fff", position: 'insideTopLeft', value: '', angle: -90, dy: 60 }} />
+                <Bar dataKey="uv" fill="#E1D9BC" label={renderCustomBarLabel} />
+            </BarChart>
+        </div>
     );
 }
 
@@ -128,7 +130,7 @@ export function PieWithGradient({
         defaultIndex,
         }) {
     return (
-        <PieChart style={{ width: '100%', maxWidth: '400px', maxHeight: '80vh', aspectRatio: 1 }} responsive>
+        <PieChart style={{backgroundColor:'rgba(106,114,130,0.5)',border: '2px solid #e5e7eb',borderRadius:'20%',width: '100%', maxWidth: '400px', maxHeight: '38vh', aspectRatio: 1 }} responsive>
             <Pie data={pieData} dataKey="value" isAnimationActive={isAnimationActive} shape={PieGradient} innerRadius="20%" />
             <Tooltip defaultIndex={defaultIndex} />
         </PieChart>

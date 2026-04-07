@@ -5,8 +5,8 @@ import { PieWithGradient, CustomizeLabels } from "./pages/Charts.jsx";
 function App() {
 
   return (
-    <div className="flex flex-row flex-wrap ">
-        <section className="navbar w-full h-32 flex justify-end items-center bg-[#E1D9BC]">
+    <div className="flex flex-row flex-wrap max-vh-100 overflow-hidden ">
+        <section className="navbar w-full h-[13vh] flex justify-end items-center bg-[#E1D9BC]">
             <div className="navbar-container flex-row mx-auto">
                 <ul className="navbar-buttons flex flex-row justify-center gap-20">
                     <li className="nav-item hover:scale-105 transition-all duration-200">
@@ -25,7 +25,7 @@ function App() {
             </div>
                 <SideBar />
         </section>
-        <section className="center-content border-12 min-w-screen flex flex-col items-end gap-10 px-15">
+        <section className="center-content border-12 min-w-screen max-h-[87vh]  min-h-[87vh] flex flex-col items-end gap-2 pl-25 pr-10">
             <PieWithGradient/>
             <CustomizeLabels/>
         </section>
