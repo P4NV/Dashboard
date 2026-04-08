@@ -32,3 +32,6 @@ html,body{
     box-sizing: border-box;
     font-family: ui-serif,Georgia,Cambria;
 }
+.recharts-layer .recharts-pie-sector{
+    scale: 1.2;
+}

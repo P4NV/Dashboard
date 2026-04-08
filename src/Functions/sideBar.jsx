@@ -13,7 +13,7 @@ export default function Sidebar() {
         <div
             onMouseEnter={() => setIsOpen(true)}
             onMouseLeave={() => setIsOpen(false)}
-            className={`flex flex-col items-center rounded-3xl px-2 py-10 fixed bg-[#E1D9BC] left-10 top-40 gap-6 transition-all duration-500 ease-in-out overflow-hidden ${
+            className={`flex flex-col items-center rounded-3xl z-10 px-2 py-10 fixed bg-[#E1D9BC] left-10 top-40 gap-6 transition-all duration-500 ease-in-out overflow-hidden ${
                 isOpen ? 'w-64 min-h-[80vh] max-h-[80vh]' : 'w-16 min-h-[80vh] max-h-[80vh] delay-100'
             }`}
         >

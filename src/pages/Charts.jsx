@@ -57,9 +57,9 @@ const ChartData = [
 
 const margin = {
     top: 20,
-    right: 10,
-    left: 10,
-    bottom:10,
+    right: 0,
+    left: 0,
+    bottom: 5,
 };
 // #endregion
 
@@ -82,7 +82,7 @@ export function CustomizeLabels() {
                     label={{fill:"#fff", position: 'insideBottomRight', value: '', offset: -10 }}
                 />
                 <YAxis stroke="#fff" label={{fill:"#fff", position: 'insideTopLeft', value: '', angle: -90, dy: 60 }} />
-                <Bar dataKey="uv" fill="#E1D9BC" label={renderCustomBarLabel} />
+                <Bar dataKey="uv" fill="#E1D9BC" /> {/*label={renderCustomBarLabel}*/}
             </BarChart>
         </div>
     );
@@ -120,7 +120,7 @@ const PieGradient = (props) => {
                 clipPath={`url(#clipPath${props.index})`}
                 fill={`url(#fillGradient${props.index})`}
                 stroke={`url(#borderGradient${props.index})`}
-                strokeWidth={props.isActive ? '100%' : 0}
+                strokeWidth={props.isActive ? '100%' : 10}
             />
         </>
     );
@@ -130,8 +130,8 @@ export function PieWithGradient({
         defaultIndex,
         }) {
     return (
-        <PieChart style={{backgroundColor:'rgba(106,114,130,0.5)',border: '2px solid #e5e7eb',borderRadius:'20%',width: '100%', maxWidth: '400px', maxHeight: '38vh', aspectRatio: 1 }} responsive>
-            <Pie data={pieData} dataKey="value" isAnimationActive={isAnimationActive} shape={PieGradient} innerRadius="20%" />
+        <PieChart style={{backgroundColor:'rgba(106,114,130,0.5)',border: '2px solid #e5e7eb',borderRadius:'10%',width: '100%', maxWidth: '400px', maxHeight: '38vh', aspectRatio: 1 }} responsive>
+            <Pie cx="41%" cy="41%" data={pieData} dataKey="value" isAnimationActive={isAnimationActive} shape={PieGradient} innerRadius="15%" />
             <Tooltip defaultIndex={defaultIndex} />
         </PieChart>
     );
