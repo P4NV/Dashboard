@@ -136,3 +136,22 @@ export function PieWithGradient({
         </PieChart>
     );
 }
+
+
+//new set off chart components for the statistics page
+
+const moneyData = [
+    {name:'Tech', value:300, fill:'#0088FE'},
+    {name:'Commercial', value:500, fill:'#00C49F'},
+    {name:'Health', value:200, fill:'#FFBB28'},
+    {name:'Business', value:700, fill:'#FF8042'},
+]
+const AssetsData = [
+    {name:'Business', value:700, fill:'#0088FE'},
+    {name:'RealEstate', value:1200, fill:'#00C49F'},
+    {name:'Liabilities', value:500, fill:'#FFBB28'},
+    {name:'Products', value:200, fill:'#FF8042'},
+]
+const MyPie = () => (
+    <Pie data={moneyData} dataKey="value" nameKey="name" outerRadius="80%" innerRadius="20%" isAnimationActive={false} />
+);
