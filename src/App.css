@@ -7,11 +7,6 @@
     --primary-blank1-color:#E1D9BC;
     --primary-blank2-color:#ACBAC4;
 }
-
-.nav-item{
-    font-size: 2em;
-    background-color: var(--primary-blank2-color);
-}
 .sidebar-item{
     background-color: var(--primary-blank2-color);
 }

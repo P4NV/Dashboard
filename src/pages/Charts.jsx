@@ -1,5 +1,4 @@
-import { Bar, BarChart, XAxis, YAxis, Pie, PieChart, Sector, Tooltip } from 'recharts';
-
+import { Bar, BarChart, XAxis, YAxis, Pie, PieChart, Sector, Tooltip,Cell, Legend, ResponsiveContainer,Label } from 'recharts';
 
 const pieData = [
     { name: 'Category A', value: 500 },
@@ -141,17 +140,80 @@ export function PieWithGradient({
 //new set off chart components for the statistics page
 
 const moneyData = [
-    {name:'Tech', value:300, fill:'#0088FE'},
-    {name:'Commercial', value:500, fill:'#00C49F'},
-    {name:'Health', value:200, fill:'#FFBB28'},
-    {name:'Business', value:700, fill:'#FF8042'},
-]
-const AssetsData = [
-    {name:'Business', value:700, fill:'#0088FE'},
-    {name:'RealEstate', value:1200, fill:'#00C49F'},
-    {name:'Liabilities', value:500, fill:'#FFBB28'},
-    {name:'Products', value:200, fill:'#FF8042'},
-]
-const MyPie = () => (
-    <Pie data={moneyData} dataKey="value" nameKey="name" outerRadius="80%" innerRadius="20%" isAnimationActive={false} />
-);
+    { name: 'RealEstate', value: 400 },
+    { name: 'Liabilities', value: 300 },
+    { name: 'Other Assets', value: 300 },
+    { name: 'Overall Profit', value: 200 },
+];
+export default function SimplePie() {
+    return (
+        <div className="w-fit h-fit flex items-center justify-center flex-wrap">
+            <div className="">
+                <ResponsiveContainer width={500} height={435} >
+                    <PieChart>
+                        <Pie
+                            data={moneyData}
+                            cx="40%"
+                            cy="40%"
+                            labelLine={false}
+                            outerRadius={160}
+                            innerRadius={50}
+                            fill="#8884d8"
+                            dataKey="value"
+                        >
+                            {moneyData.map((entry, index) => (
+                                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                            ))}
+                        </Pie>
+                        <Tooltip />
+                        <Legend />
+                    </PieChart>
+                </ResponsiveContainer>
+            </div>
+            <div className="flex flex-col">
+                <div className=" w-full">
+                    <ResponsiveContainer width={210} height={210} >
+                        <PieChart>
+                            <Pie
+                                data={moneyData}
+                                cx="42%"
+                                cy="42%"
+                                labelLine={false}
+                                outerRadius={60}
+                                innerRadius={10}
+                                fill="#8884d8"
+                                dataKey="value"
+                            >
+                                {moneyData.map((entry, index) => (
+                                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                                ))}
+                            </Pie>
+                            <Tooltip />
+                        </PieChart>
+                    </ResponsiveContainer>
+                </div>
+                <div className="w-full">
+                    <ResponsiveContainer width={210} height={210} >
+                        <PieChart>
+                            <Pie
+                                data={moneyData}
+                                cx="42%"
+                                cy="42%"
+                                labelLine={false}
+                                outerRadius={60}
+                                innerRadius={10}
+                                fill="#8884d8"
+                                dataKey="value"
+                            >
+                                {moneyData.map((entry, index) => (
+                                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                                ))}
+                            </Pie>
+                            <Tooltip />
+                        </PieChart>
+                    </ResponsiveContainer>
+                </div>
+            </div>
+        </div>
+    );
+}

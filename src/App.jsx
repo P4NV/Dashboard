@@ -14,16 +14,16 @@ function App() {
             <div className="navbar-container flex-row mx-auto">
                 <ul className="navbar-buttons flex flex-row justify-center gap-20">
                     <li className="nav-item hover:scale-105 transition-all duration-200">
-                        <button onClick={() => setActive("home")} className="border-r-4 border-b-4 border-2 px-5">Home</button>
+                        <button onClick={() => setActive("home")} className="border-r-4 border-b-4 border-2 rounded-br-2xl rounded-tl-2xl bg-[#ACBAC4] text-[2em] px-5">Home</button>
                     </li>
                     <li className="nav-item hover:scale-105 transition-all duration-200">
-                        <button onClick={() => setActive("statistics")} className="border-r-4 border-b-4 border-2 px-5">Statistics</button>
+                        <button onClick={() => setActive("statistics")} className="border-r-4 border-b-4 border-2 rounded-br-2xl rounded-tl-2xl bg-[#ACBAC4] text-[2em] px-5">Statistics</button>
                     </li>
                     <li className="nav-item hover:scale-105 transition-all duration-200">
-                        <button onClick={() => setActive("tasks")} className="border-r-4 border-b-4 border-2 px-5">Tasks</button>
+                        <button onClick={() => setActive("tasks")} className="border-r-4 border-b-4 border-2 rounded-br-2xl rounded-tl-2xl bg-[#ACBAC4] text-[2em] px-5">Tasks</button>
                     </li>
                     <li className="nav-item hover:scale-105 transition-all duration-200">
-                        <button onClick={() => setActive("journal")} className="border-r-4 border-b-4 border-2 px-5">Journal</button>
+                        <button onClick={() => setActive("journal")} className="border-r-4 border-b-4 border-2 rounded-br-2xl rounded-tl-2xl bg-[#ACBAC4] text-[2em] px-5">Journal</button>
                     </li>
                 </ul>
             </div>
